@@ -114,27 +114,106 @@
     .mobile-nav.open{transform:translateY(0)}
     .mobile-nav .links{display:flex;flex-direction:column;gap:12px}
 
-    /* responsive */
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .hero-right .hero-img{height:200px}
-      .gov-list{grid-template-columns:repeat(2,1fr)}
-      .nav-links{display:none}
-      .hamburger{display:block}
-    }
-    @media (max-width:560px){
-      .gov-list{grid-template-columns:1fr}
-      header{padding:12px}
-      .logo-ct{width:54px;height:54px}
-      .brand-name .title{font-size:.98rem}
-      .hero-right .hero-img{height:160px}
-      footer{flex-direction:column;align-items:flex-start}
-    }
+  /* تحسين الحاويات على الموبايل */
+@media (max-width: 980px) {
+  .wrap {
+    padding: 10px;
+  }
 
-    /* RTL adjustments - controlled via [dir="rtl"] on <html> */
-    [dir="rtl"] .brand{flex-direction:row-reverse}
-    [dir="rtl"] .nav-links a{direction:rtl}
-    [dir="ltr"] .brand{flex-direction:row}
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-card {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .hero-right .hero-img {
+    height: 180px;
+  }
+
+  /* تقليل المسافات العمودية */
+  section {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .card, .message, .central, .gov, .person {
+    padding: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* تحسين النصوص */
+  h2, h3 {
+    font-size: 1rem !important;
+  }
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.6;
+  }
+
+  /* الشخصيات في الهيكل */
+  .person img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .deputies {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* المحافظات */
+  .gov-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* الأزرار */
+  .btn {
+    padding: 8px 12px !important;
+    font-size: 0.9rem;
+  }
+
+  /* الفوتر */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    padding: 10px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-right .hero-img {
+    height: 150px;
+  }
+  .logo-ct {
+    width: 48px;
+    height: 48px;
+  }
+  .brand-name .title {
+    font-size: 0.9rem;
+  }
+  .brand-name .subtitle {
+    font-size: 0.75rem;
+  }
+}
+
   </style>
 </head>
 <body>
